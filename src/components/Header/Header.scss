@@ -1,6 +1,12 @@
 header {
   background-color: rgba(242, 131, 153, 0.9);
   color: white;
+  margin-bottom: 24px;
+
+  .wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
 
   nav {
     display: flex;

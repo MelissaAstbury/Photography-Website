@@ -7,16 +7,17 @@ import "./Header.scss";
 const Header = () => {
   return (
     <header>
-      <nav>
-        <h2>Nicole Amber Photography</h2>
+      <div className="wrapper">
+        <nav>
+          <h2>Melissa Jade Photography</h2>
 
-        <ul>
-          <NavItem link="/">Home</NavItem>
-          <NavItem link="/">Work</NavItem>
-          <NavItem link="/">About Me</NavItem>
-          <NavItem link="/">Contact</NavItem>
-        </ul>
-      </nav>
+          <ul>
+            <NavItem link="/">Home</NavItem>
+            <NavItem link="/aboutme">About Me</NavItem>
+            <NavItem link="/">Contact</NavItem>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };
