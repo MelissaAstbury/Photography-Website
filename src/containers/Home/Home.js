@@ -6,6 +6,7 @@ import img3 from "../../assets/front-cover-themes.png";
 import img4 from "../../assets/front-cover-families.png";
 import img5 from "../../assets/front-cover-baby-bump.png";
 import img6 from "../../assets/front-cover-baby-splash.png";
+import Button from "../../components/UI/Button/Button";
 
 import "./Home.scss";
 
@@ -14,21 +15,27 @@ const Home = () => {
     <div className="images-area">
       <div className="img-container">
         <img src={img1} alt="Newborn Baby" />
+        <Button className="img-button">NEWBORN</Button>
       </div>
       <div className="img-container">
         <img src={img2} alt="Toddler enjoying a Cask Smash" />
+        <Button className="img-button">CAKE SMASH</Button>
       </div>
       <div className="img-container">
         <img src={img3} alt="Themes" />
+        <Button className="img-button">OCCASIONS</Button>
       </div>
       <div className="img-container">
-        <img src={img4} alt="Wedding Day" />
+        <img src={img4} alt="Family" />
+        <Button className="img-button">FAMILY</Button>
       </div>
       <div className="img-container">
         <img src={img5} alt="Maternity" />
+        <Button className="img-button">MATERNITY</Button>
       </div>
       <div className="img-container">
         <img src={img6} alt="Toddler enjoying a Water Splash" />
+        <Button className="img-button">SPLASH FUN</Button>
       </div>
     </div>
   );
