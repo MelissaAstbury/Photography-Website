@@ -1,12 +1,19 @@
 import React from "react";
-import "./App.scss";
 
-function App() {
+import Header from "./components/Header/Header";
+
+import "./App.scss";
+import { BrowserRouter } from "react-router-dom";
+
+const App = () => {
   return (
-    <div className="App">
-      <h1>Hello World!</h1>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <h1>Hello World!</h1>
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
