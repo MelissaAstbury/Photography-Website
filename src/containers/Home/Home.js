@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
 import img1 from "../../assets/front-cover-newborn.png";
 import img2 from "../../assets/front-cover-baby-smash.png";
@@ -13,6 +14,7 @@ import Button from "../../components/UI/Button/Button";
 import "./Home.scss";
 
 const Home = () => {
+  const history = useHistory();
   return (
     <>
       <div className="main-image-container">
@@ -22,7 +24,12 @@ const Home = () => {
       <div className="images-area">
         <div className="img-container">
           <img src={img1} alt="Newborn Baby" />
-          <Button className="img-button">NEWBORN</Button>
+          <Button
+            clicked={() => history.push("/newborn")}
+            className="img-button"
+          >
+            NEWBORN
+          </Button>
         </div>
         <div className="img-container">
           <img src={img2} alt="Toddler enjoying a Cask Smash" />
