@@ -5,6 +5,7 @@ import "./AboutMe.scss";
 const AboutMe = () => {
   return (
     <div className="wrapper">
+      <h2 className="sub-title">Experience</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Lectus sit amet est
@@ -16,6 +17,7 @@ const AboutMe = () => {
         Urna duis convallis convallis tellus id interdum. Id neque aliquam
         vestibulum morbi blandit cursus risus.
       </p>
+      <h2 className="sub-title">What Photography means to me</h2>
       <p>
         Consectetur adipiscing elit pellentesque habitant morbi tristique. Dolor
         sit amet consectetur adipiscing elit duis tristique sollicitudin.

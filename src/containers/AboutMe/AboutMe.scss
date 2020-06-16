@@ -1,4 +1,16 @@
 .wrapper {
   max-width: 1280px;
   margin: 0 auto;
+
+  .sub-title {
+    margin-top: 18px;
+    text-decoration: underline;
+  }
+
+  p {
+    margin: auto;
+    margin-top: 18px;
+    align-items: center;
+    max-width: 800px;
+  }
 }
