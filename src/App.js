@@ -8,7 +8,6 @@ import Contact from "./containers/Contact/Contact";
 import Newborn from "./containers/Newborn/Newborn";
 
 import "./App.scss";
-import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
   const routes = (
@@ -22,12 +21,10 @@ const App = () => {
   );
 
   return (
-    <BrowserRouter>
-      <div className="App">
-        <Header />
-        {routes}
-      </div>
-    </BrowserRouter>
+    <div className="App">
+      <Header />
+      {routes}
+    </div>
   );
 };
 

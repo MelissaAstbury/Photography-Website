@@ -2,6 +2,7 @@
   width: 100%;
   margin: 0 auto;
   margin-bottom: 18px;
+  position: relative;
 
   img {
     width: 100%;
@@ -12,7 +13,7 @@
 
   .sub-title {
     position: absolute;
-    top: 50%;
+    top: 80%;
     left: 10%;
     color: white;
     font-weight: 700;

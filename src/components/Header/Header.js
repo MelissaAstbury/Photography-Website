@@ -12,9 +12,15 @@ const Header = () => {
           <h2>Melissa Jade Photography</h2>
 
           <ul>
-            <NavItem link="/">Home</NavItem>
-            <NavItem link="/aboutme">About Me</NavItem>
-            <NavItem link="/contact">Contact</NavItem>
+            <NavItem link="/" exact>
+              Home
+            </NavItem>
+            <NavItem link="/aboutme" exact>
+              About Me
+            </NavItem>
+            <NavItem link="/contact" exact>
+              Contact
+            </NavItem>
           </ul>
         </nav>
       </div>
