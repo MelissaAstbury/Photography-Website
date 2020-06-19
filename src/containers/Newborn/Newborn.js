@@ -1,6 +1,7 @@
 import React from "react";
 
-import img from "../../assets/front-cover-newborn.png";
+// import img from "../../assets/front-cover-newborn.png";
+import ImageSlider from "../../components/ImageSlider/ImageSlider";
 
 import "./Newborn.scss";
 
@@ -9,35 +10,38 @@ const Newborn = () => {
     <>
       <div>
         <h2>Newborn</h2>
-        <div className="images-area">
-          <div className="img-container">
-            <img src={img} alt="Newborn Baby" />
-          </div>
-          <div className="img-container">
-            <img src={img} alt="Newborn Baby" />
-          </div>
-          <div className="img-container">
-            <img src={img} alt="Newborn Baby" />
-          </div>
-          <div className="img-container">
-            <img src={img} alt="Newborn Baby" />
-          </div>
-          <div className="img-container">
-            <img src={img} alt="Newborn Baby" />
-          </div>
-          <div className="img-container">
-            <img src={img} alt="Newborn Baby" />
-          </div>
-          <div className="img-container">
-            <img src={img} alt="Newborn Baby" />
-          </div>
-          <div className="img-container">
-            <img src={img} alt="Newborn Baby" />
-          </div>
-          <div className="img-container">
-            <img src={img} alt="Newborn Baby" />
-          </div>
+        <div>
+          <ImageSlider />
         </div>
+        {/* <div className="images-area">
+          <div className="img-container">
+            <img src={img} alt="Newborn Baby" />
+          </div>
+          <div className="img-container">
+            <img src={img} alt="Newborn Baby" />
+          </div>
+          <div className="img-container">
+            <img src={img} alt="Newborn Baby" />
+          </div>
+          <div className="img-container">
+            <img src={img} alt="Newborn Baby" />
+          </div>
+          <div className="img-container">
+            <img src={img} alt="Newborn Baby" />
+          </div>
+          <div className="img-container">
+            <img src={img} alt="Newborn Baby" />
+          </div>
+          <div className="img-container">
+            <img src={img} alt="Newborn Baby" />
+          </div>
+          <div className="img-container">
+            <img src={img} alt="Newborn Baby" />
+          </div>
+          <div className="img-container">
+            <img src={img} alt="Newborn Baby" />
+          </div>
+        </div> */}
       </div>
     </>
   );
