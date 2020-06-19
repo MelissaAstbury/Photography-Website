@@ -33,7 +33,12 @@ const Home = () => {
         </div>
         <div className="img-container">
           <img src={img2} alt="Toddler enjoying a Cask Smash" />
-          <Button className="img-button">CAKE SMASH</Button>
+          <Button
+            clicked={() => history.push("/cakesmash")}
+            className="img-button"
+          >
+            CAKE SMASH
+          </Button>
         </div>
         <div className="img-container">
           <img src={img3} alt="Themes" />

@@ -6,6 +6,7 @@ import Home from "./containers/Home/Home";
 import AboutMe from "./containers/AboutMe/AboutMe";
 import Contact from "./containers/Contact/Contact";
 import Newborn from "./containers/Newborn/Newborn";
+import CakeSmash from "./containers/CakeSmash/CakeSmash";
 
 import "./App.scss";
 
@@ -16,6 +17,7 @@ const App = () => {
       <Route path="/aboutme" component={AboutMe} />
       <Route path="/contact" component={Contact} />
       <Route path="/newborn" component={Newborn} />
+      <Route path="/cakesmash" component={CakeSmash} />
       <Redirect to="/" />
     </Switch>
   );
