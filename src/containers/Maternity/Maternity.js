@@ -1,9 +1,8 @@
 import React from "react";
 
-import "./Newborn.scss";
 import ImageSlider from "../../components/ImageSlider/ImageSlider";
 
-const Newborn = () => {
+const Maternity = () => {
   return (
     <>
       <div>
@@ -16,4 +15,4 @@ const Newborn = () => {
   );
 };
 
-export default Newborn;
+export default Maternity;

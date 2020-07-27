@@ -41,20 +41,40 @@ const Home = () => {
           </Button>
         </div>
         <div className="img-container">
-          <img src={img3} alt="Themes" />
-          <Button className="img-button">OCCASIONS</Button>
+          <img src={img3} alt="Occasions" />
+          <Button
+            clicked={() => history.push("/occasions")}
+            className="img-button"
+          >
+            OCCASIONS
+          </Button>
         </div>
         <div className="img-container">
           <img src={img4} alt="Family" />
-          <Button className="img-button">FAMILY</Button>
+          <Button
+            clicked={() => history.push("/family")}
+            className="img-button"
+          >
+            FAMILY
+          </Button>
         </div>
         <div className="img-container">
           <img src={img5} alt="Maternity" />
-          <Button className="img-button">MATERNITY</Button>
+          <Button
+            clicked={() => history.push("/maternity")}
+            className="img-button"
+          >
+            MATERNITY
+          </Button>
         </div>
         <div className="img-container">
           <img src={img6} alt="Toddler enjoying a Water Splash" />
-          <Button className="img-button">SPLASH FUN</Button>
+          <Button
+            clicked={() => history.push("/splashFun")}
+            className="img-button"
+          >
+            SPLASH FUN
+          </Button>
         </div>
       </div>
     </>

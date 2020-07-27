@@ -6,10 +6,9 @@ const Contact = () => {
   return (
     <div>
       <p>Thank you for your interest</p>
-      <p>
-        Please fill in the required form and I will get back to you as soon as
-        possible
-      </p>
+      <p>Email: info@photography.com</p>
+      <p>Instagram: infoPhotography</p>
+      <p>Facebook: infoPhotography</p>
       <p>I look forward to hearing from you soon!</p>
     </div>
   );
