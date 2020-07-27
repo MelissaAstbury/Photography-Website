@@ -59,12 +59,18 @@ const ImageSlider = () => {
           ></div>
         ))}
       </div>
-
-      <div className="backArrow arrow" onClick={goToPrevSlide}>
+      <div
+        className="backArrow arrow"
+        onClick={goToPrevSlide}
+        style={{ display: currentIndex === 0 ? "none" : null }}
+      >
         <i className="fa fa-arrow-left fa-2x" aria-hidden="true"></i>
       </div>
-
-      <div className="nextArrow arrow" onClick={goToNextSlide}>
+      <div
+        className="nextArrow arrow"
+        onClick={goToNextSlide}
+        style={{ display: currentIndex === images.length - 1 ? "none" : null }}
+      >
         <i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
       </div>
     </div>
