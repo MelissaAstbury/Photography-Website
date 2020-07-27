@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./ImageSlider.scss";
+import client from "../../client";
 
 const ImageSlider = () => {
+  const [photos, setPhotos] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [translateValue, setTranslateValue] = useState(0);
   const [images, setImages] = useState([
@@ -15,6 +17,18 @@ const ImageSlider = () => {
     "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/sandy-shores.jpg",
     "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/tree-of-life.jpg",
   ]);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const response = await client.getEntries();
+        console.log(response);
+        setPhotos(response.items);
+      } catch (err) {
+        console.log(err);
+      }
+    })();
+  }, []);
 
   const goToPrevSlide = () => {
     if (currentIndex === 0) return;
