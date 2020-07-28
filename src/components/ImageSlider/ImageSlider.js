@@ -7,23 +7,31 @@ const ImageSlider = () => {
   const [photos, setPhotos] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [translateValue, setTranslateValue] = useState(0);
-  const [images, setImages] = useState([
-    "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/aurora.jpg",
-    "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/canyon.jpg",
-    "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/city.jpg",
-    "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/desert.jpg",
-    "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/mountains.jpg",
-    "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/redsky.jpg",
-    "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/sandy-shores.jpg",
-    "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/tree-of-life.jpg",
-  ]);
+  // const [images, setImages] = useState([
+  //   "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/aurora.jpg",
+  //   "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/canyon.jpg",
+  //   "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/city.jpg",
+  //   "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/desert.jpg",
+  //   "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/mountains.jpg",
+  //   "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/redsky.jpg",
+  //   "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/sandy-shores.jpg",
+  //   "https://s3.us-east-2.amazonaws.com/dzuz14/thumbnails/tree-of-life.jpg",
+  // ]);
+  // const { featuredImage } = article.fields;
 
   useEffect(() => {
     (async () => {
       try {
         const response = await client.getEntries();
-        console.log(response);
-        setPhotos(response.items);
+        for (let item of response.items) {
+          setPhotos((photos) => [
+            ...photos,
+            item.fields.featuredImage.fields.file.url,
+          ]);
+          // setPhotos([...photos, item.fields.featuredImage.fields.file.url]);
+          // console.log(item.fields.featuredImage.fields.file);
+        }
+        // setPhotos(response.items);
       } catch (err) {
         console.log(err);
       }
@@ -38,7 +46,7 @@ const ImageSlider = () => {
   };
 
   const goToNextSlide = () => {
-    if (currentIndex === images.length - 1) {
+    if (currentIndex === photos.length - 1) {
       setCurrentIndex(0);
       setTranslateValue(0);
     }
@@ -60,7 +68,7 @@ const ImageSlider = () => {
           transition: "transform ease-out 0.45s",
         }}
       >
-        {images.map((image, i) => (
+        {photos.map((image, i) => (
           <div
             key={i}
             className="slide"
@@ -83,7 +91,7 @@ const ImageSlider = () => {
       <div
         className="nextArrow arrow"
         onClick={goToNextSlide}
-        style={{ display: currentIndex === images.length - 1 ? "none" : null }}
+        style={{ display: currentIndex === photos.length - 1 ? "none" : null }}
       >
         <i className="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
       </div>
